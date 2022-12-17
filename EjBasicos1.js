@@ -41,9 +41,25 @@ if (age>=18){
 
 // PRIMERA ITERACIÓN: Declara variable con un listado de comidas
 
+let comidas = ['macarrones', 'filete', 'pollo al ast', 'pizza']
+let estoyDieta = true
+
 // SEGUNDA ITERACIÓN: Recorrer el listado de comidas
 
+for (const comida of comidas) {
+    if (comida==='pizza'){
+        if (estoyDieta){
+            console.log('El sistema detecta que estás a dieta, no me puedes engañar: Te voy a servir un Brócoli delicioso')
+        }else{
+             console.log("Aquí tienes tu Pizza")
+        }
+       
+    }
+    
+}
+
 // TERCERA ITERACIÓN: Si hay pizza me sirves pizza 
+
 
 // CUARTA ITERACIÓN: Declara variable estoy a dieta
 
