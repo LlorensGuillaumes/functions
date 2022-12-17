@@ -1,78 +1,17 @@
 /* 
-* Para correr este fichero -> tendréis que estar dentro de la carpeta Ejercicio1
-* Abrir la terminal de VsCode
-* Escribir en consola 'node app.js' 
-*/
-
-/*
-* Ejercicio Guiado
-* -> Arrays y condicionales
-*/ 
-
-// Vamos a declarar 3 arrays y queremos saber la longitud de cada uno de ellos.
-var avengers = ['Spiderman', 'AntMan', 'Hulk'];
-var mutants = ['Wolverine', 'Ciclops', 'Storm'];
-var defenders = ['Daredevil', 'IronFist', 'Luke Cage'];
-// Para ello declaremos una function -> por parametro le entra una lista
-var calcListLength = (list) => {
-    // Declaramos el contador que irá sumando el valor de cada uno de los elementos de la lista
-    var myLength = 0;
-    // Recorremos los elementos de la lista
-    list.forEach(element => {
-        // Acumumlamos el valor de la lista
-        myLength = myLength + element.length;
-    });
-    // Devolvemos 
-    return myLength;
-}
-// Llamamos a nuestras funciones y asignamos el valor de retorno
-var avengersLength = calcListLength(avengers);
-var mutantsLength = calcListLength(mutants);
-var defendersLength = calcListLength(defenders);
-
-// Declaramos una funcion comparador para saber cual de los tres arrays es el mayor
-var comparator = (a,b,c) => {
-    if (a > b) {
-        if (a == c)
-          return 'Empate entre a y c';
-        if (a > c)
-          return 'a gana';
-        else
-          return 'c gana';
-      } else {
-        if (a == b)
-          return 'Empate entre a y b';
-        if (b > c)
-          return 'b gana';
-        else
-          return 'c gana';
-      }
-}
-
-// le pasamos las longitudes de nuestros arrays y nos devolverá el elemento mayor-> el c
-console.log(comparator(avengersLength,mutantsLength, defendersLength));
-
-//Ahora vamos a añadir la media de la longitud de los elementos de nuestra lista
-var media = (a,b,c) => {
-    return a+b+c / 3
-}
-// Le pasamos a nuestra media los valores
-console.log(media(avengersLength,mutantsLength, defendersLength));
-
-/* 
 * Ejercicio 1
 * → Devuelve el string de mayor longitud
 */
 
 // Declaramos un array -> Cambiar nombre de myArray al vuestro e introducimos valores
-var myArray = [];
+var joan = ['Madrid', 'Galicia', 'Cantabria', 'Catalunya', 'Aragón', 'Extremadura'];
 // Declaramos una variable donde guardaremos el string mayor de nuestro myArray
 var longestElement= '';
 // PRIMERA ITERACIÓN: Recorrer el Array y comprobar la longitud de cada uno de ellos.
-myArray.forEach( (element) => {
+joan.forEach( (ciudad) => {
     // SEGUNDA ITERACIÓN: Si longestElement es mayor a relement cambiamos el valor de longestElement
-    if() {
-        longestElement = element
+        if(longestElement.length<ciudad.length) {
+        longestElement = ciudad
     }
 });
 // TERCERA ITERACIÓN MOSTRAR EL ELEMENTO MAYOR
