@@ -127,6 +127,18 @@ for(let i=1; i<=9;i++){     //creo un bucle del 1 al 9
 1
 */
 
+let str2 = ""
+for(let i=9; i>=1;i--){     //creo un bucle del 9 al 1
+    
+    for (let a=1; a<=i; a++){  //creo otro bucle que imprima el numero las veces iguales a el
+    str2 = str2 + i  
+    }
+    
+    console.log(str2)
+    str2=""  //reinicio la varible a mostrar
+
+}
+
 /* 
 * Ejercicio 6 - BONUS
 * → Palíndromo: Esta función debe recibir un string y decir si es un palíndromo. 
