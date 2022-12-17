@@ -139,19 +139,43 @@ for(let i=9; i>=1;i--){     //creo un bucle del 9 al 1
 
 }
 
-/* 
-* Ejercicio 6 - BONUS
-* → Palíndromo: Esta función debe recibir un string y decir si es un palíndromo. 
-* Un palíndromo es una frase que se lee igual al derecho que al revés.
-*/
+// * Ejercicio 6 - BONUS
+// * → Palíndromo: Esta función debe recibir un string y decir si es un palíndromo. 
+// * Un palíndromo es una frase que se lee igual al derecho que al revés.
+// */
 
-var palindrome = (word) => {
-    // PRIMERA ITERACIÓN: declarar variable y pasarle el valor + toUpperCae + Eliminar espacios replace MDN
-    var initialWord = word; // + toUpperCae + replace;
-    // SEGUNDA ITERACIÓN: Hacer split + reverse + join MDN
-    var reverseWord = initialWord //  Split into an array, Reverse array, Join array elements into string
-    // TERCERA ITERACIÓN: Devolver true o false
-    return initialWord === reverseWord ? true : false;  // check if word is palindrome
+function palindrome(word){
+
+    let arrWord = word.split("")            //convierto la palabra en array
+    arrWord = arrWord.reverse()             //invierto el array              
+    let wordReverse = arrWord.join("")        //convierto arra invertido a string
+
+    switch(word===wordReverse){     //comparo la palabra con la invertida y compruebo mediante un switch si són iguales
+        case true:
+            return "es un palindrome"
+        
+        case false:
+            return "no es un palindrome"
+    }
 }
-// CUARTA ITERACIÓN: Llamar a la función palindrome pasando una palabra o frase- 'Yo soy'
-console.log(palindrome('Yo soy') ? 'es palíndromo' : 'NO es palíndromo');
+
+let palabra = "yo soy";       //declaro variable palabra
+
+//palabra=palabra.toUpperCase     //la convierto a MAYUSCULAS 
+let modificateString = (palabra.toUpperCase())
+modificateString = modificateString.replace(/\s+/g,"")
+
+console.log('La frase: "' + palabra + '" '+ palindrome(modificateString))
+
+
+
+// var palindrome = (word) => {
+//     // PRIMERA ITERACIÓN: declarar variable y pasarle el valor + toUpperCae + Eliminar espacios replace MDN
+//     var initialWord = word; // + toUpperCae + replace;
+//     // SEGUNDA ITERACIÓN: Hacer split + reverse + join MDN
+//     var reverseWord = initialWord //  Split into an array, Reverse array, Join array elements into string
+//     // TERCERA ITERACIÓN: Devolver true o false
+//     return initialWord === reverseWord ? true : false;  // check if word is palindrome
+// }
+// // CUARTA ITERACIÓN: Llamar a la función palindrome pasando una palabra o frase- 'Yo soy'
+// console.log(palindrome('Yo soy') ? 'es palíndromo' : 'NO es palíndromo');
