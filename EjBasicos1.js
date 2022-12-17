@@ -71,10 +71,21 @@ for (const comida of comidas) {
 */
 
 // PRIMERA ITERACIÓN: Declara variable con 'El rayo es el mejor'
+let declaracion = 'El rayo es el mejor'
+declaracion = declaracion.split(" ").join("") //quito los espacios de la cadena
 
 // SEGUNDA ITERACIÓN: Pasa ese texto a mayúsculas -> MDN es vuestro amigo
+let declaracionUpper = (declaracion.toUpperCase())  //passo a mayusculas
 
 // TERCERA ITERACIÓN: Modifica el string -> to array MDN 
+
+let arrDeclaracion = []
+arrDeclaracion = declaracionUpper.split("") // lo convierto en array
+
+
+let strDecGuiones = (arrDeclaracion.join('-')) //covierto array a string con guiones de separación
+console.log(strDecGuiones) // muestro la cadena pedida
+
 
 // CUARTA ITERACIÓN: Añade un '-' después de cada elemento
 
