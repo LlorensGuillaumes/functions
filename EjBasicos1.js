@@ -104,7 +104,15 @@ console.log(strDecGuiones) // muestro la cadena pedida
 88888888
 999999999
 */
+let str = ""
 
+for(let i=1; i<=9;i++){     //creo un bucle del 1 al 9
+    for (let a=1; a<=i; a++){  //creo otro bucle que imprima el numero las veces iguales a el
+    str = str + i  
+    }
+    console.log(str)
+    str=""  //reinicio la varible a mostrar
+}
 /* 
 * Ejercicio 5
 * → La piramide Invertida- imprime por consola:
