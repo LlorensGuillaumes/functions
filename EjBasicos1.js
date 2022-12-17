@@ -23,8 +23,14 @@ console.log(longestElement);
 */
 
 // PRIMERA ITERACIÓN: Declara variable age
+let age = 17
 
 // SEGUNDA ITERACIÓN: Comprobar con un condicional si puedes conducir
+if (age>=18){
+    console.log('Tienes edad suficiente para conducir, siempre y cuando tengas el carnet y todos los puntos')
+}else{
+    console.log('No tienes edad para sacarte el carnet de conducir, si conduces y te pillan, te empapelan')
+}
 
 // TERCERA ITERACIÓN: Mostrar si puede conducir o no
 
